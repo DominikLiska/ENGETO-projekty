@@ -1,2 +1,2 @@
-# Vytvoreni-CV
-Zkouška HTML a CSS na jednoduché CV - ENGETO
+# Moje projekty v kurzu ENGETO
+HTML, CSS a JS
