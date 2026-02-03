@@ -1,0 +1,422 @@
+/* Vynulovat marginy a paddingy */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+:root {
+  --text-black: #1d1d1d;
+  --text-white: #ffffff;
+  --background-green: #3e4e22;
+  --background-color: #f5f5f5;
+  --background-lightgreen: #644b4f;
+  --header-color: #503242;
+}
+
+title {
+  display: none;
+}
+body {
+  font-family: Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--header-color);
+  color: var(--text-white);
+  padding: 1rem;
+}
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu-icon {
+  color: var(--text-white);
+  font-size: 2.4em;
+  border-radius: 40%;
+}
+nav ul {
+  display: none;
+}
+
+.hero {
+  background: url("images/scott-goodwill-y8Ngwq34_Ak-unsplash.jpg");
+  display: flex;
+  color: var(--text-white);
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  justify-content: end;
+  align-items: flex-end;
+  padding: 1.3rem;
+}
+/* Potřebuji upravit zvlášť aby text dal do bloku dle předlohy */
+.hero h1 {
+  text-align: right;
+  max-width: 90%;
+  line-height: 0.6;
+  font-size: 4rem;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+  padding-right: 2rem;
+  padding-bottom: 3rem;
+}
+
+.about {
+  padding: 3rem 1.5rem;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 0.8rem;
+  font-size: 2.5rem;
+  margin-top: 2rem;
+}
+/* Nefunguje font-weight, musel jsem přidat do head, aby se načetl font správně */
+.about p {
+  margin-bottom: 1.5rem;
+  color: var(--text-black);
+  text-align: justify;
+  font-weight: 500;
+}
+
+.what-we-do {
+  background-color: var(--background-green);
+  color: var(--text-white);
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+.what-we-do h2 {
+  text-align: center;
+}
+.icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.icons img {
+  width: 6.5rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  margin-top: 4rem;
+  padding: 0 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.gallery img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border: 1px solid #effafc;
+  border-radius: 5px;
+  display: block;
+}
+
+.gallery-text {
+  background-color: var(--background-lightgreen);
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.gallery-text h2 {
+  margin: 0;
+  color: var(--text-white);
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+.where-to-go {
+  background-color: var(--background-lightgreen);
+  color: var(--text-white);
+  padding: 4rem 1.5rem;
+  text-align: left;
+}
+
+.where-to-go h2 {
+  text-align: left;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.where-to-go p {
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.contact-us {
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--text-white);
+  color: var(--text-black);
+  padding: 0.7rem 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #d1d5db; 
+  cursor: pointer; 
+}
+
+.review-content {
+  padding: 1rem 2rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.reviews img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin: 2rem auto;
+}
+h4 {
+  font-weight: bold;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.reviews p {
+  text-align: center;
+  margin: 1rem 2rem;
+  font-weight: 400;
+}
+
+footer {
+  background-color: rgb(54, 54, 54);
+  display: flex;
+  flex-direction: column;
+}
+.contact {
+  color: rgb(209, 121, 121);
+  text-decoration: underline;
+  margin-top: 1rem;
+  font-weight: bolder;
+  font-size: larger;
+}
+footer p {
+  color: white;
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+
+nav ul.active {
+    display: flex; 
+    flex-direction: column; 
+    position: absolute; 
+    top: 60px; 
+    right: 0; 
+    width: 100%; 
+    background-color: var(--header-color); 
+    text-align: center;
+    padding: 1rem 0;
+    z-index: 1000; 
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.1rem;
+   
+}
+/* Styl pro odkazy v otevřeném menu */
+nav ul.active a {
+    color: white; 
+    text-decoration: none; 
+    font-size: 1.2rem; 
+    font-weight: bold;
+    display: block; 
+}
+
+
+nav ul.active a:active {
+    color: #cccccc;
+}
+
+nav ul.active li {
+    margin: 1rem 0; 
+}
+
+.menu-icon {
+    cursor: pointer;
+    
+}
+
+/* / Media Queries pro větší obrazovky * */
+
+@media (min-width: 768px) {
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+    align-items: stretch;
+  }
+
+  .about-text {
+    padding: 3rem 3rem 3rem 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .about h2 {
+    text-align: left;
+    margin-top: 0;
+  }
+
+  .about .image-about {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-top: 0;
+  }
+
+  .icons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    max-width: 100%;
+    margin-top: 3rem;
+  }
+
+  .icons img {
+    margin: 0 auto 1rem auto;
+    width: 80px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .where-to-go {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: start;
+    padding: 5rem 3rem;
+    text-align: left;
+  }
+
+  .where-to-go h2 {
+    font-size: 3rem;
+    margin-bottom: 0;
+  }
+
+  .reviews {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    padding: 4rem 3rem;
+  }
+
+  .reviews h2,
+  .review-intro {
+    grid-column: 1 / -1;
+  }
+
+  .review-intro {
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+  }
+
+  .end-pictures {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+
+  .end-pictures img {
+    margin-bottom: 0;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* DESKTOP (min-width: 992px) */
+
+@media (min-width: 992px) {
+  .menu-icon {
+    display: none;
+  }
+
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav {
+    justify-content: center;
+    padding: 1rem 0;
+  }
+
+  nav a {
+    color: var(--text-white);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+  }
+
+  nav a:hover {
+    color: #cccccc;
+    text-decoration: underline;
+  }
+  .hero h1 {
+    font-size: 6rem;
+    max-width: 70%;
+    padding-right: 8rem;
+    padding-bottom: 4rem;
+  }
+
+  .about,
+  .our-trips,
+  .reviews {
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .what-we-do,
+  .where-to-go {
+    max-width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .end-pictures {
+    max-width: 100%;
+    padding: 0;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
