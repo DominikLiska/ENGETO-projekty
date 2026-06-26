@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Klon - Registrace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark bg-form">
+    <main class="form-container">
+        <form id="registrationForm" class="registration-form">
+            <input type="text" id="firstName" placeholder="Křestní jméno" required>
+            <input type="text" id="lastName" placeholder="Příjmení" required>
+            <input type="email" id="email" placeholder="Přihlašovací email" required>
+            
+            <input type="password" id="password" placeholder="Vaše heslo" minlength="6" required>
+            <input type="password" id="passwordConfirm" placeholder="Heslo znovu" minlength="6" required>
+            
+            <button type="submit" class="btn btn-red btn-full">Odeslat</button>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
